@@ -21,7 +21,7 @@ func solution(_ num_list:[Int], _ n:Int) -> [[Int]] {
     
     for i in num_list {
         subResult.append(i)
-        if subResult.count >= 2 {
+        if subResult.count >= n {
             result.append(subResult)
             subResult = []
         }
