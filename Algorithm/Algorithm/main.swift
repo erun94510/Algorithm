@@ -7,5 +7,12 @@
 
 import Foundation
 
-print("Hello, World!")
+func solution(_ num_list:[Int], _ n:Int) -> [[Int]] {
 
+    return result
+}
+
+let sol = solution()
+
+
+print(sol)
