@@ -7,13 +7,20 @@
 
 import Foundation
 
-func solution(_ price:Int, _ money:Int, _ count:Int) -> Int64{
-    var answer:Int64 = -1
+func solution(_ quiz:[String]) -> [String] {
     
-    return answer
+    var result: [String] = []
+    var resultA: [[String]] = []
+    
+    for _ in quiz {
+        resultA[] += quiz.split(separator: " ")
+        print(resultA)
+    }
+    
+    return []
 }
 
-var sol = solution(3, 20, 4)
+var sol = solution(["3 - 4 = -3", "5 + 6 = 11"])
 
 
 print(sol)

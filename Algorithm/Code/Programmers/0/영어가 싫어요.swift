@@ -18,6 +18,7 @@ func solution(_ numbers:String) -> Int64 {
     var number = numbers
     
     for i in 0..<numbersInt.count {
+        //of의 부분을 with로 치환
         number = number.replacingOccurrences(of: numbersInt[i], with: String(i))
     }
     
