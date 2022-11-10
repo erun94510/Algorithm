@@ -16,6 +16,7 @@ import Foundation
 //따라서 세 수의 합인 0을 return 해야 합니다.
 
 func solution(_ absolutes:[Int], _ signs:[Bool]) -> Int {
+    
     var result: [Int] = []
     var index: Int = 0
     
@@ -27,5 +28,6 @@ func solution(_ absolutes:[Int], _ signs:[Bool]) -> Int {
         }
         index += 1
     }
+    
     return result.reduce(0, +)
 }
