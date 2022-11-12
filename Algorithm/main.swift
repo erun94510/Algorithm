@@ -8,19 +8,42 @@
 import Foundation
 
 
-func solution(_ numbers:[Int]) -> [Int] {
-    var result: [Int] = []
-    for (indexI, numberI) in numbers.enumerated() {
-        for (indexJ, numberJ) in numbers.enumerated() {
-            if indexI != indexJ && !result.contains(numberI + numberJ) {
-                result.append(numberI + numberJ)
+func solution(_ keyinput:[String], _ board:[Int]) -> [Int] {
+    
+    var result: [Int] = [0, 0]
+    var countR: Int = 0
+    var countL: Int = 0
+    var countU: Int = 0
+    var countD: Int = 0
+    
+    for i in keyinput {
+        if i == "down" {
+            if countD != board[1] / 2 {
+                result[1] -= 1     			
+                countD += 1
+            }
+        } else if i == "up" {
+            if countU != board[1] / 2 {
+                result[1] += 1
+                countU += 1
+            }
+        } else if i == "left" {
+            if countL != board[0] / 2 {
+                result[0] -= 1
+                countL += 1
+            }
+        } else if i == "right" {
+            if countR != board[0] / 2 {
+                result[0] += 1
+                countR += 1
             }
         }
+        print(result)
     }
-    return result.sorted(by: <)
+    return result
 }
 
-var sol = solution([2,1,3,4,1])
+var sol = solution(["down", "down", "down", "down", "down"], [11, 11])
 
 print(sol)
 
