@@ -26,5 +26,6 @@ func solution1(_ a:Int, _ b:Int) -> String {
             days += month[i]
         }
     }
+    
     return weekName[days % 7]
 }
