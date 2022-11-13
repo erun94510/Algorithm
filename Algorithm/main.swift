@@ -7,26 +7,24 @@
 
 import Foundation
 
-func solution(_ keyinput:[String], _ board:[Int]) -> [Int] {
+func solution(_ left:Int, _ right:Int) -> Int {
     
-    var result: [Int] = [0, 0]
+    var yak: Int = 0
+    var result: [Int] = []
     
-    for i in keyinput {
-        if i == "down" && abs(result[1] - 1) <= board[1] / 2{
-            result[1] -= 1
-        } else if i == "up" && abs(result[1] + 1) <= board[1] / 2{
-            result[1] += 1
-        } else if i == "left" && abs(result[0] - 1) <= board[0] / 2{
-            result[0] -= 1
-        } else if i == "right" && abs(result[0] + 1) <= board[0] / 2{
-            result[0] += 1
+    for i in left ... right {
+        for j in 1 ... i {
+            if i % j == 0 {
+                yak += 1
+            }
         }
-        print(result)
+        result.append(yak % 2 == 0 ? i * 1 : i * -1)
+        yak = 0
     }
-    return result
+    return result.reduce(0, +)
 }
 
-var sol = solution(["down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", "down", ], [99, 99])
+var sol = solution(13, 17)
 
 print(sol)
 
