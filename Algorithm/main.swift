@@ -7,24 +7,19 @@
 
 import Foundation
 
-func solution(_ left:Int, _ right:Int) -> Int {
+func solution(_ num1:Int, _ num2:Int) -> Int {
     
-    var yak: Int = 0
-    var result: [Int] = []
-    
-    for i in left ... right {
-        for j in 1 ... i {
-            if i % j == 0 {
-                yak += 1
-            }
-        }
-        result.append(yak % 2 == 0 ? i * 1 : i * -1)
-        yak = 0
+    var result: Int = 0
+
+    while num2 * result <= num1 {
+        result += 1
     }
-    return result.reduce(0, +)
+    
+    print(2^2)
+    return result - 1
 }
 
-var sol = solution(13, 17)
+var sol = solution(7, 2)
 
 print(sol)
 
