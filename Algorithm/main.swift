@@ -7,24 +7,17 @@
 
 import Foundation
 
-func solution(_ num1:Int, _ num2:Int) -> Int {
-    
-    var result: Int = 0
 
-    while num2 * result <= num1 {
-        result += 1
-    }
-    
-    print(2^2)
-    return result - 1
+
+func solution(_ num1:Int, _ num2:Int) -> Int {
+    let num1: Double = Double(num1)
+    let num2: Double = Double(num2)
+    let result: Int = Int(num1 / num2 * 1000)
+    return result
 }
 
-var sol = solution(7, 2)
-
+var sol = solution(3, 2)
 print(sol)
-
-
-
 
 
 
