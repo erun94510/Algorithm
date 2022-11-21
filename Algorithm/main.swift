@@ -8,30 +8,23 @@
 import Foundation
 
 
-
-func solution(_ num1:Int, _ num2:Int) -> Int {
-    let num1: Double = Double(num1)
-    let num2: Double = Double(num2)
-    let result: Int = Int(num1 / num2 * 1000)
-    return result
+func solution(_ s:String) -> String {
+    var result: String = ""
+    return String(s.split(separator: " ").min()!) + " " + String(s.split(separator: " ").max()!)
 }
 
-var sol = solution(3, 2)
+
+
+var sol = solution("-1 -2 -3 -4")
+    
 print(sol)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+//func solution(_ my_string:String, _ letter:String) -> String {
+//    return String(my_string.map { String($0!)! }.filter { $0 != letter }!)
+//}
+//
+//var sol = solution("abcdef", "f")
+//print(sol)
 
 
 
