@@ -9,8 +9,7 @@ import Foundation
 
 
 func solution(_ s:String) -> String {
-    var result: String = ""
-    return String(s.split(separator: " ").min()!) + " " + String(s.split(separator: " ").max()!)
+    return String(s.split(separator: " ").map { Int($0)! }.min()!) + " " + String(s.split(separator: " ").map { Int($0)! }.max()!)
 }
 
 

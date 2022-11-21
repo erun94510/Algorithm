@@ -24,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		6308B163292BC6070032D983 /* 진료 순서 정하기.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "진료 순서 정하기.swift"; sourceTree = "<group>"; };
+		6308B165292BC9000032D983 /* 최댓값과 최솟값.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "최댓값과 최솟값.swift"; sourceTree = "<group>"; };
 		63244309291359B400231410 /* 컨트롤 제트.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "컨트롤 제트.swift"; sourceTree = "<group>"; };
 		6324430A29135BB900231410 /* 가위 바위 보.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "가위 바위 보.swift"; sourceTree = "<group>"; };
 		6324430B29135F2400231410 /* 인텍스 바꾸기.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "인텍스 바꾸기.swift"; sourceTree = "<group>"; };
@@ -95,6 +96,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6308B164292BC8ED0032D983 /* 2 */ = {
+			isa = PBXGroup;
+			children = (
+				6308B165292BC9000032D983 /* 최댓값과 최솟값.swift */,
+			);
+			path = 2;
+			sourceTree = "<group>";
+		};
 		638B983B290020AA002F2971 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +150,7 @@
 			children = (
 				638B985729002152002F2971 /* 0 */,
 				638B985829002158002F2971 /* 1 */,
+				6308B164292BC8ED0032D983 /* 2 */,
 			);
 			path = Programmers;
 			sourceTree = "<group>";
