@@ -7,15 +7,14 @@
 
 import Foundation
 
-func solution(_ my_string:String, _ n:Int) -> String {
-    var result: String = ""
-    for i in my_string {
-        for _ in 0 ... 3 {
-            result += String(i)
-        }
-    }
-    return result
+func solution(_ n:Int) -> Int {
+    let t = type(of: sqrt(n))
+    
+    return t == Int ? 1 : 2
 }
+
+var sol =  solution(144)
+print(sol)
 
 //func solution(_ numbers:[Int], _ hand:String) -> String {
 //
