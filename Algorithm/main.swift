@@ -7,16 +7,44 @@
 
 import Foundation
 
-
-func solution(_ s:String) -> String {
-    return String(s.split(separator: " ").map { Int($0)! }.min()!) + " " + String(s.split(separator: " ").map { Int($0)! }.max()!)
+func solution(_ my_string:String, _ n:Int) -> String {
+    var result: String = ""
+    for i in my_string {
+        for _ in 0 ... 3 {
+            result += String(i)
+        }
+    }
+    return result
 }
 
-
-
-var sol = solution("-1 -2 -3 -4")
-    
-print(sol)
+//func solution(_ numbers:[Int], _ hand:String) -> String {
+//
+//    var result: String = ""
+//
+//    for i in numbers {
+//        switch i {
+//        case 1, 4, 7:
+//            result += "L"
+//        case 3, 6, 9:
+//            result += "R"
+//        case 2, 5, 8, 0:
+//            if hand == "left" {
+//                result += "L"
+//            } else {
+//                result += "R"
+//            }
+//        default:
+//            result += ""
+//        }
+//    }
+//
+//    print(result)
+//    return ""
+//}
+//
+//var sol = solution([7, 0, 8, 2, 8, 3, 1, 5, 7, 6, 2], "left")
+//
+//print(sol)
     
 //func solution(_ my_string:String, _ letter:String) -> String {
 //    return String(my_string.map { String($0!)! }.filter { $0 != letter }!)
