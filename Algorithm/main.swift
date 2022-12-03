@@ -7,15 +7,8 @@
 
 import Foundation
 
-
 func solution(_ my_string:String) -> Int {
-    var result: Int = 0
-    for i in my_string {
-        if i == ("1234567890") {
-            result += Int(String(i))!
-        }
-    }
-    return result
+    return Array(my_string.filter { ("0123456789").contains($0) }.map { Int(String($0))! }).reduce(0, +)
 }
 
 var sol = solution("aAb1B2cC34oOp")
