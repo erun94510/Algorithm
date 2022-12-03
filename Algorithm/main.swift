@@ -7,13 +7,6 @@
 
 import Foundation
 
-func solution(_ my_string:String) -> Int {
-    return Array(my_string.filter { ("0123456789").contains($0) }.map { Int(String($0))! }).reduce(0, +)
-}
-
-var sol = solution("aAb1B2cC34oOp")
-print(sol)
-
 //func solution(_ n:Int) -> Int {
 //    let t = type(of: sqrt(n))
 //
@@ -69,18 +62,18 @@ print(sol)
 
 
 
-//func solution(_ quiz:[String]) -> [String] {
-//
-//    var result: [String] = []
-//    var resultA: [[String]] = []
-//
-//    for _ in quiz {
-//        resultA[] += quiz.split(separator: " ")
-//        print(resultA)
-//    }
-//
-//    return []
-//}
+func solution(_ quiz:[String]) -> [String] {
+
+    var result: [String] = []
+    var resultA: [[String]] = []
+
+    for _ in quiz {
+        resultA[] += quiz.split(separator: " ")
+        print(resultA)
+    }
+
+    return []
+}
 //
 //
 //func solution(_ numlist:[Int], _ n:Int) -> [Int] {
