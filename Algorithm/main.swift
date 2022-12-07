@@ -7,14 +7,14 @@
 
 import Foundation
 
-//func solution(_ n:Int) -> Int {
-//    let t = type(of: sqrt(n))
-//
-//    return t == Int ? 1 : 2
-//}
-//
-//var sol =  solution(144)
-//print(sol)
+func solution(_ n:Int) -> Int {
+    let t = type(of: sqrt(n))
+
+    return t == Int ? 1 : 2
+}
+
+var sol =  solution(144)
+print(sol)
 
 //func solution(_ numbers:[Int], _ hand:String) -> String {
 //
