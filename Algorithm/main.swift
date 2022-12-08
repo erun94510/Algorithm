@@ -7,14 +7,57 @@
 
 import Foundation
 
-func solution(_ n:Int) -> Int {
-    let t = type(of: sqrt(n))
 
-    return t == Int ? 1 : 2
+func solution(_ s:String) -> Int {
+    var result: Int = 0
+    var firstAndSecond: [String] = ["", ""]
+    var firstCount: Int = 0
+    var secondCount: Int = 0
+    
+    for i in s {
+        if firstAndSecond[0] == "" {
+            firstAndSecond[0] = String(i)
+        }
+        
+        if firstAndSecond[0] == String(i) {
+            firstCount += 1
+            print("first: \(i)")
+        } else {
+            secondCount += 1
+            firstAndSecond[1] = String(i)
+            print("second: \(i)")
+        }
+        
+        if firstCount == secondCount {
+            result += 1
+            print("result: \(result)")
+            firstCount = 0
+            secondCount = 0
+            firstAndSecond[0] = ""
+            firstAndSecond[1] = ""
+        }
+        
+        
+    }
+    if firstAndSecond[0] != "" && firstAndSecond[1] == "" {
+        result += 1
+    }
+    return result
 }
 
-var sol =  solution(144)
-print(sol)
+print(solution("abracadabra"))
+
+
+
+
+//func solution(_ n:Int) -> Int {
+//    let t = type(of: sqrt(n))
+//
+//    return t == Int ? 1 : 2
+//}
+//
+//var sol =  solution(144)
+//print(sol)
 
 //func solution(_ numbers:[Int], _ hand:String) -> String {
 //
@@ -44,7 +87,7 @@ print(sol)
 //var sol = solution([7, 0, 8, 2, 8, 3, 1, 5, 7, 6, 2], "left")
 //
 //print(sol)
-    
+
 //func solution(_ my_string:String, _ letter:String) -> String {
 //    return String(my_string.map { String($0!)! }.filter { $0 != letter }!)
 //}
@@ -62,18 +105,18 @@ print(sol)
 
 
 
-func solution(_ quiz:[String]) -> [String] {
-
-    var result: [String] = []
-    var resultA: [[String]] = []
-
-    for _ in quiz {
-        resultA[] += quiz.split(separator: " ")
-        print(resultA)
-    }
-
-    return []
-}
+//func solution(_ quiz:[String]) -> [String] {
+//
+//    var result: [String] = []
+//    var resultA: [[String]] = []
+//
+//    for _ in quiz {
+//        resultA[] += quiz.split(separator: " ")
+//        print(resultA)
+//    }
+//
+//    return []
+//}
 //
 //
 //func solution(_ numlist:[Int], _ n:Int) -> [Int] {
