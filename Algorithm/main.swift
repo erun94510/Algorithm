@@ -36,8 +36,7 @@ func solution(_ s:String) -> Int {
             firstAndSecond[0] = ""
             firstAndSecond[1] = ""
         }
-        
-        
+ 
     }
     if firstAndSecond[0] != "" && firstAndSecond[1] == "" {
         result += 1
