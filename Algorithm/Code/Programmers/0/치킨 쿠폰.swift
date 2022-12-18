@@ -27,7 +27,7 @@ func solution(_ chicken:Int) -> Int {
     
     for _ in 0 ... chicken {
         coupon = currentChicken / 10
-        currentChicken = coupon + (currentChicken - coupon * 10)
+        currentChicken = coupon + currentChicken % 10
         result += coupon
     }
     

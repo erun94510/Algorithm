@@ -8,6 +8,29 @@
 import Foundation
 
 
+//for i in s {
+//    result += String(i) == " " ? String(i).uppercased() : String(i).lowercased()
+//}
+func solution(_ s:String) -> String {
+
+    let arr: [String] = s.map { String($0) }
+    var dict: [String : Int] = [:]
+    
+    for i in arr {
+        dict[i, default: 0] += 1
+        print(dict)
+    }
+    
+    var result: String = ""
+    for (j, _) in dict.sorted(by: { $0.0 < $1.0 }).filter({ $0.1 == 1 }) {
+        result += j
+    }
+    return result
+}
+
+print(solution("abddddc"))
+
+
 
 //func solution(_ n:Int) -> Int {
 //    var result: Int = 0
