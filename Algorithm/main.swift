@@ -7,44 +7,33 @@
 
 import Foundation
 
+func solution(_ n:Int) -> Int
+{
+    var answer: Int = 0
+    let number: [Int] = String(n).map { Int(String($0))! }
+    
+    for i in number {
+        answer += i
+    }
+    
+    return answer
+}
 
-//for i in s {
-//    result += String(i) == " " ? String(i).uppercased() : String(i).lowercased()
+print(solution(123))
+
+//func solution(_ n:Int) -> Int {
+//   var result: Int = 0
+//   if n != 0 {
+//       for i in 1 ... n {
+//           if n % i == 0 {
+//               result += i
+//           }
+//       }
+//   }
+//   return result
 //}
-func solution(_ s:String) -> String {
-
-    let arr: [String] = s.map { String($0) }
-    var dict: [String : Int] = [:]
-    
-    for i in arr {
-        dict[i, default: 0] += 1
-        print(dict)
-    }
-    
-    var result: String = ""
-    for (j, _) in dict.sorted(by: { $0.0 < $1.0 }).filter({ $0.1 == 1 }) {
-        result += j
-    }
-    return result
-}
-
-print(solution("abddddc"))
-
-
-
-func solution(_ n:Int) -> Int {
-   var result: Int = 0
-   if n != 0 {
-       for i in 1 ... n {
-           if n % i == 0 {
-               result += i
-           }
-       }
-   }
-   return result
-}
-
-print(solution(12))
+//
+//print(solution(12))
 
 
 //func solution(_ s:String) -> Int {
@@ -86,16 +75,6 @@ print(solution(12))
 //print(solution("abracadabra"))
 //
 //
-//
-//
-//func solution(_ n:Int) -> Int {
-//    let t = type(of: sqrt(n))
-//
-//    return t == Int ? 1 : 2
-//}
-//
-//var sol =  solution(144)
-//print(sol)
 //
 //func solution(_ numbers:[Int], _ hand:String) -> String {
 //
@@ -142,19 +121,6 @@ print(solution(12))
 //
 //
 //
-//
-//func solution(_ quiz:[String]) -> [String] {
-//
-//    var result: [String] = []
-//    var resultA: [[String]] = []
-//
-//    for _ in quiz {
-//        resultA[] += quiz.split(separator: " ")
-//        print(resultA)
-//    }
-//
-//    return []
-//}
 //
 //
 //func solution(_ numlist:[Int], _ n:Int) -> [Int] {
