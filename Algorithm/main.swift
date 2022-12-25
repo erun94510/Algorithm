@@ -7,19 +7,12 @@
 
 import Foundation
 
-func solution(_ n:Int) -> Int
-{
-    var answer: Int = 0
-    let number: [Int] = String(n).map { Int(String($0))! }
-    
-    for i in number {
-        answer += i
-    }
-    
-    return answer
+
+func solution(_ n:Int64) -> [Int] {
+    return String(n).map { Int(String($0))! }.reversed()
 }
 
-print(solution(123))
+print(solution(12345))
 
 //func solution(_ n:Int) -> Int {
 //   var result: Int = 0
