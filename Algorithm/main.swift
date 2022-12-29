@@ -7,26 +7,19 @@
 
 import Foundation
 
-
-func solution(_ n:Int64) -> [Int] {
-    return String(n).map { Int(String($0))! }.reversed()
+func solution(_ n:Int) -> Int {
+   var result: Int = 0
+   if n != 0 {
+       for i in 1 ... n {
+           if n % i == 0 {
+               result += i
+           }
+       }
+   }
+   return result
 }
 
-print(solution(12345))
-
-//func solution(_ n:Int) -> Int {
-//   var result: Int = 0
-//   if n != 0 {
-//       for i in 1 ... n {
-//           if n % i == 0 {
-//               result += i
-//           }
-//       }
-//   }
-//   return result
-//}
-//
-//print(solution(12))
+print(solution(12))
 
 
 //func solution(_ s:String) -> Int {
