@@ -11,6 +11,7 @@ import Foundation
 func solution(_ n:Int64) -> Int64 {
     let nArr: [Int64] = String(n).map { Int64(String($0))! }
     let sortedN: [String] = nArr.sorted(by: >).map { String($0) }
+    
     return Int64(sortedN.reduce("", +))!
 }
 
