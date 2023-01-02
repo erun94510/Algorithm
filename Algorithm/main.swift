@@ -7,15 +7,29 @@
 
 import Foundation
 
-
-func solution(_ n:Int64) -> Int64 {
-    let nArr: [Int64] = String(n).map { Int64(String($0))! }
-    let sortedN: [String] = nArr.sorted(by: >).map { String($0) }
+func solution(_ number:[Int]) -> Int {
+    var result: [[Int]] = []
+    for i in 0 ..< number.count {
+        for j in 1 ..< number.count {
+            for k in 2 ..< number.count {
+                if number[i] + number[j] + number[k] == 0 {
+                    result += [[number[i], number[j], number[k]].sorted()]
+                }
+            }
+        }
+    }
     
-    return Int64(sortedN.reduce("", +))!
+    return Set(result).count
 }
 
-print(solution(118372))
+//func solution(_ n:Int64) -> Int64 {
+//    let nArr: [Int64] = String(n).map { Int64(String($0))! }
+//    let sortedN: [String] = nArr.sorted(by: >).map { String($0) }
+//
+//    return Int64(sortedN.reduce("", +))!
+//}
+//
+//print(solution(118372))
 
 //func solution(_ n:Int) -> Int {
 //   var result: Int = 0
