@@ -7,20 +7,20 @@
 
 import Foundation
 
-func solution(_ number:[Int]) -> Int {
-    var result: [[Int]] = []
-    for i in 0 ..< number.count {
-        for j in 1 ..< number.count {
-            for k in 2 ..< number.count {
-                if number[i] + number[j] + number[k] == 0 {
-                    result += [[number[i], number[j], number[k]].sorted()]
-                }
-            }
-        }
-    }
-    
-    return Set(result).count
-}
+//func solution(_ number:[Int]) -> Int {
+//    var result: [[Int]] = []
+//    for i in 0 ..< number.count {
+//        for j in 1 ..< number.count {
+//            for k in 2 ..< number.count {
+//                if number[i] + number[j] + number[k] == 0 {
+//                    result += [[number[i], number[j], number[k]].sorted()]
+//                }
+//            }
+//        }
+//    }
+//    
+//    return Set(result).count
+//}
 
 //func solution(_ n:Int64) -> Int64 {
 //    let nArr: [Int64] = String(n).map { Int64(String($0))! }
