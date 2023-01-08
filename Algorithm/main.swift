@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 //func solution(_ number:[Int]) -> Int {
 //    var result: [[Int]] = []
 //    for i in 0 ..< number.count {
@@ -18,7 +19,7 @@ import Foundation
 //            }
 //        }
 //    }
-//    
+//
 //    return Set(result).count
 //}
 
