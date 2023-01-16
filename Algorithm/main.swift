@@ -19,7 +19,6 @@ func solution(_ number:[Int]) -> Int {
             }
         }
     }
-
     return Set(result).count
 }
 
